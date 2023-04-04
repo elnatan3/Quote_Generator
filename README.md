@@ -17,3 +17,7 @@ Once you have opened the index.html file, click the "New Quote" button to genera
 
 # Contribution
 If you would like to contribute to this project, please fork the repository and create a pull request. You can also submit issues or feature requests in the repository's issue tracker.
+
+# Contact Information
+For any inquiries contact me at
+Email: elnatantesfa21@gmail.com
