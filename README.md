@@ -5,7 +5,7 @@ This app uses HTML, CSS, and JavaScript to fetch a quote from the Quotable API a
 
 # Installation
 To run this app, you will need to clone this repository to your local machine and open the index.html file in your preferred web browser.
-Type this in your git bash or whatever command promp you are using: git clone https://github.com/yourusername/quote-of-the-day-app.git
+Type this in your git bash or whatever command promp you are using: git clone https://github.com/elnatan3/quote-of-the-day-app.git
 
 # Usage
 Once you have opened the index.html file, click the "New Quote" button to generate a new quote. Click the speaker icon to hear the quote using text-to-speech, and click the copy icon to copy the quote to your clipboard.
