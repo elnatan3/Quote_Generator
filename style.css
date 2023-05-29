@@ -13,7 +13,7 @@ body {
   background: url('img/background.jpg');
 }
 
-.wrapper {
+.container {
   width: 605px;
   background: #ffffff;
   border-radius: 30px;
@@ -25,11 +25,11 @@ body {
   justify-content: center;
 }
 
-header, .content :where(i, p, span){
+.quote-header, .quote-content :where(i, p, span){
   color: #202842;
 }
 
-.wrapper header {
+.container .quote-header {
   font-size: 48px;
   font-weight: 700;
   text-align: center;
@@ -37,7 +37,7 @@ header, .content :where(i, p, span){
   font-family: 'Montserrat', sans-serif;
 }
 
-.content {
+.quote-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,13 +51,13 @@ header, .content :where(i, p, span){
   margin-bottom: 15px;
 }
 
-.quote-area .quote {
+.quote-area .quote-text {
   font-size: 32px;
   line-height: 1.5;
   font-family: 'Dancing Script', cursive;
 }
 
-.author {
+.quote-author {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,52 +66,80 @@ header, .content :where(i, p, span){
   font-style: italic;
 }
 
-.author span:first-child {
+.quote-author span:first-child {
   margin-right: 10px;
   font-family: 'Montserrat', sans-serif;
 }
 
-.buttons {
+.quote-buttons {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 
-.features {
+
+.quote-features {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  transform: translateX(100%);
+  animation: slide-in 1s forwards;
 }
 
-.features ul {
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.quote-features ul {
   display: flex;
   list-style: none;
-  margin-right: 25px;
 }
 
-.features ul li {
-  margin-right: 15px;
+.quote-features ul li {
+  position: relative;
   height: 50px;
   width: 50px;
+  margin-left: 20px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   color: #ccc;
   border-radius: 50%;
-  align-items: center;
-  justify-content: center;
   border: 2px solid #ccc;
   transition: all 0.3s ease;
-  margin-left: 15px;
+  animation: pulse 1s infinite alternate;
 }
 
-.features ul li:hover,
-.features ul li.active {
+.quote-features ul li:hover,
+.quote-features ul li.active {
   color: #fff;
   background-color: #444;
   border: 2px solid #444;
+  transform: rotate(360deg);
 }
 
-.buttons button {
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+
+.new-quote-btn{
+  margin-left: 50px;
+}
+
+.quote-buttons button {
   border: none;
   color: #fff;
   outline: none;
@@ -124,11 +152,11 @@ header, .content :where(i, p, span){
   transition: all 0.3s ease;
 }
 
-.buttons button:hover {
+.quote-buttons button:hover {
   background-color: #0062cc;
 }
 
-.buttons button.loading {
+.quote-buttons button.loading {
   opacity: 0.7;
   pointer-events: none;
 }
