@@ -1,9 +1,9 @@
-const quoteText = document.querySelector(".quote"),
-quoteBtn = document.querySelector("button"),
-authorName = document.querySelector(".name"),
-speechBtn = document.querySelector(".speech"),
-copyBtn = document.querySelector(".copy"),
-twitterBtn = document.querySelector(".twitter"),
+const quoteText = document.querySelector(".quote-text"),
+quoteBtn = document.querySelector(".new-quote-btn"),
+authorName = document.querySelector(".author-name"),
+speechBtn = document.querySelector(".speech-icon"),
+copyBtn = document.querySelector(".copy-icon"),
+twitterBtn = document.querySelector(".twitter-icon"),
 synth = speechSynthesis;
 
 function randomQuote(){
@@ -30,7 +30,5 @@ speechBtn.addEventListener("click", ()=>{
 copyBtn.addEventListener("click", ()=>{
     navigator.clipboard.writeText(quoteText.innerText);
 });
-
-
 
 quoteBtn.addEventListener("click", randomQuote);
